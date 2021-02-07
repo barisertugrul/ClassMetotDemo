@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace ClassMetotDemo
+﻿namespace ClassMetotDemo
 {
     class Program
     {
@@ -99,6 +97,13 @@ namespace ClassMetotDemo
 
             //Müşteri listesi tekrar çağrılıyor
             musteriManager.MusteriListesi();
+
+            //musteri4 bilgileri güncelleniyor
+            musteri4.MusteriBakiye = musteri4.MusteriBakiye + 784.96;
+            musteriManager.MusteriGuncelle(musteri4);
+
+            musteriManager.MusteriListesi();
+
 
         }
     }

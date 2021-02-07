@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace ClassMetotDemo
 {
@@ -28,6 +27,13 @@ namespace ClassMetotDemo
         {
             Console.WriteLine("{0} nolu ve {1} isimli müşteri silindi.\n", musteri.MusteriId, musteri.MusteriAdSoyad);
             musteriListesi.Remove(musteri);
+        }
+
+        public void MusteriGuncelle(Musteri musteri)
+        {
+            var result = musteriListesi.FindIndex(m => m.MusteriId == musteri.MusteriId);
+            musteriListesi[result] = musteri;
+            Console.WriteLine("\n{0} nolu ve {1} isimli müşterinin bilgileri güncellendi.\n", musteri.MusteriId, musteri.MusteriAdSoyad);
         }
 
         public void MusteriListesi()
